@@ -18,7 +18,12 @@ case [choice, computer]
 when ['p', 'r'], ['r', 's'], ['s', 'p'],
   puts W
   wins = wins + 1
-when []
+when ['p', 'p'], ['r', 'r'], ['s', 's'],
+  puts T
+else
+  puts L
+  loses = loses + 1
+
   #use case statement with [player, computer] (This will be challenging, but totally worth it!)
     #when ['p', 'r'], ect..
       #puts you win
@@ -30,7 +35,10 @@ when []
       # add one to win variable
 end
 #Declare Winner at end with score of wins and loses
-
+if wins = 2
+  puts W
+else
+  puts L  
 #### BONUS ####
   #Show history of computer and user moves at end.
 
